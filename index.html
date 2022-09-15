@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <main id="app" class="fr-p-2w" style="max-width: 50rem">
+      <h1>Reproduction bug DSFR : liens d’ancre au sein d’onglets</h1>
+
+      <div class="fr-tabs">
+        <ul class="fr-tabs__list" role="tablist" aria-label="Onglets d'exemple">
+          <li role="presentation">
+            <button
+              id="tabpanel-404"
+              class="fr-tabs__tab"
+              tabindex="0"
+              role="tab"
+              aria-selected="true"
+              aria-controls="tabpanel-404-panel"
+            >
+              Onglet 1
+            </button>
+          </li>
+          <li role="presentation">
+            <button
+              id="tabpanel-405"
+              class="fr-tabs__tab"
+              tabindex="-1"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tabpanel-405-panel"
+            >
+              Onglet 2
+            </button>
+          </li>
+        </ul>
+        <div
+          id="tabpanel-404-panel"
+          class="fr-tabs__panel fr-tabs__panel--selected"
+          role="tabpanel"
+          aria-labelledby="tabpanel-404"
+          tabindex="0"
+        >
+          <p>
+            <a href="#lorem">Lien vers un paragraphe</a>
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+            distinctio aperiam dicta architecto atque ratione totam ex maiores
+            nostrum deleniti cupiditate vero minus ullam, quod magnam laborum
+            eveniet veritatis voluptates!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+            distinctio aperiam dicta architecto atque ratione totam ex maiores
+            nostrum deleniti cupiditate vero minus ullam, quod magnam laborum
+            eveniet veritatis voluptates!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+            distinctio aperiam dicta architecto atque ratione totam ex maiores
+            nostrum deleniti cupiditate vero minus ullam, quod magnam laborum
+            eveniet veritatis voluptates!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+            distinctio aperiam dicta architecto atque ratione totam ex maiores
+            nostrum deleniti cupiditate vero minus ullam, quod magnam laborum
+            eveniet veritatis voluptates!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod rem,
+            officia rerum eligendi laboriosam illo tempore animi fugit cumque.
+            Vero ullam animi voluptatibus enim distinctio totam magni quos eius
+            natus!
+          </p>
+          <p>
+            <a href="#ipsum">Lien vers un autre paragraphe</a>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod rem,
+            officia rerum eligendi laboriosam illo tempore animi fugit cumque.
+            Vero ullam animi voluptatibus enim distinctio totam magni quos eius
+            natus!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod rem,
+            officia rerum eligendi laboriosam illo tempore animi fugit cumque.
+            Vero ullam animi voluptatibus enim distinctio totam magni quos eius
+            natus!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod rem,
+            officia rerum eligendi laboriosam illo tempore animi fugit cumque.
+            Vero ullam animi voluptatibus enim distinctio totam magni quos eius
+            natus!
+          </p>
+          <p id="lorem">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
+            eius fugiat omnis odit, et ab id, repellendus earum, voluptatem
+            nulla officia non laborum reiciendis illo consequatur veritatis
+            repellat sint. Quos.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
+            eius fugiat omnis odit, et ab id, repellendus earum, voluptatem
+            nulla officia non laborum reiciendis illo consequatur veritatis
+            repellat sint. Quos.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
+            eius fugiat omnis odit, et ab id, repellendus earum, voluptatem
+            nulla officia non laborum reiciendis illo consequatur veritatis
+            repellat sint. Quos.
+          </p>
+          <p id="ipsum">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod rem,
+            officia rerum eligendi laboriosam illo tempore animi fugit cumque.
+            Vero ullam animi voluptatibus enim distinctio totam magni quos eius
+            natus!
+          </p>
+        </div>
+        <div
+          id="tabpanel-405-panel"
+          class="fr-tabs__panel"
+          role="tabpanel"
+          aria-labelledby="tabpanel-405"
+          tabindex="0"
+        >
+          <p>Pouet</p>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
